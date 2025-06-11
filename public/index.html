@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Kundendaten Verwaltung</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+    </head>
+    <body>
+        <h1>Kundendaten eingeben</h1>
+<form id="kundenForm" class="container mt-4" style="max-width: 100%;">
+  <div class="row g-3">
+    <div class="col">
+      <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Nachname" required />
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" id="vorname" name="vorname" placeholder="Vorname" required />
+    </div>
+    <div class="col">
+      <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail" />
+    </div>
+    <div class="col">
+      <input type="date" class="form-control" id="geburtsdatum" name="geburtsdatum" placeholder="01.01.1990" />
+    </div>
+    <div class="col">
+      <input type="tel" class="form-control" id="telefonnummer" name="telefonnummer" placeholder="+4301234567890" />
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" id="land" name="land" placeholder="Land" />
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" id="plz" name="plz" placeholder="Postleitzahl" />
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" id="strasse" name="strasse" placeholder="Straße" />
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" id="hausnummer" name="hausnummer" placeholder="Hausnummer" />
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary w-100">Speichern</button>
+    </div>
+  </div>
+</form>
+
+
+
+        <div class="container mt-5">
+        <h2>Kundensuche</h2>
+        <div class="input-group mb-3">
+            <input type="text" id="sucheInput" class="form-control" placeholder="Suchen..." />
+            <button onclick="ladeKunden()" class="btn btn-primary">Suchen</button>
+            <button onclick="showEntireList()" class="btn btn-secondary">Zeige gesamte Liste</button>
+        </div>
+
+        <h2>Kundenliste</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                <th>ID</th>
+                <th>Nachname</th>
+                <th>Vorname</th>
+                <th>E-Mail</th>
+                <th>Geburtsdatum</th>
+                <th>Telefonnummer</th>
+                <th>Land</th>
+                <th>PLZ</th>
+                <th>Straße</th>
+                <th>Hausnummer</th>
+                <th>Aktion</th>
+                </tr>
+            </thead>
+            <tbody id="kundenTabelle"></tbody>
+            </table>
+        </div>
+        </div>
+
+         <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+<script src="script.js" defer></script> 

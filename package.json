@@ -1,0 +1,20 @@
+{
+  "name": "tutorial-part-1",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "bootstrap": "^5.3.6",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}
